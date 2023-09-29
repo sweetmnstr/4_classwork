@@ -27,21 +27,30 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
   </head>
-  <p>
+  <p class="text-danger">
     <i>
       Disclaimer: this is TSI University task for HTML, CSS and SASS workshop,
       not for publishing anywhere on the media.
     </i>
   </p>
-  <article>
-    <header>
-      <h1>What is Sass? Your guide to this top CSS preprocessor</h1>
-      <p><i>By Tammy Coron January 10, 2020</i></p>
+  <article class="row container-fluid justify-content-center">
+    <header class="col-8 container-md row justify-content-start">
+      <h1 class="col-12">
+        What is Sass? Your guide to this top CSS preprocessor
+      </h1>
+      <p class="col-3 align-self-start">
+        <i>By Tammy Coron January 10, 2020</i>
+      </p>
     </header>
-    <div>
+    <div class="col-9">
       <h2>Discover what Sass is, and learn how to start using it.</h2>
       <p>
         <b>
@@ -55,6 +64,7 @@
           more efficient. Let's explore in more detail.
           <br />
           <a
+            class="text-dark mt-25"
             href="https://www.creativebloq.com/web-design/what-is-sass-111517618"
           >
             Article source:
@@ -64,7 +74,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="col-9">
       <h2><b>What is a CSS preprocessor?</b></h2>
       <p>
         A CSS preprocessor is a scripting language that extends CSS by allowing
@@ -82,7 +92,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="col-9">
       <h2><b>What is Sass?</b></h2>
       <p>
         <b> Sass is arguably the most useful of all CSS extensions </b>
@@ -102,7 +112,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="col-9">
       <h2><b>Variables</b></h2>
       <p>
         Just like other programming languages, Sass allows the use of variables
@@ -116,13 +126,16 @@
         <br />
         <code>
           $font-stack: Helvetica, sans-serif; $primary-color: #333; body { font:
-          100% $font-stack; color: $primary-color; } The following CSS will be
-          produced: body { font: 100% Helvetica, sans-serif; color: #333; }
+          100% $font-stack; color: $primary-color; }
         </code>
+        <br />
+        The following CSS will be produced:
+        <br />
+        <code>body { font: 100% Helvetica, sans-serif; color: #333; } </code>
       </p>
     </div>
 
-    <div>
+    <div class="col-9">
       <h2><b>Nesting</b></h2>
       <p>
         Nesting is a double-edged sword. While it provides an excellent method
@@ -149,7 +162,7 @@
         </code>
       </p>
     </div>
-    <div>
+    <div class="col-9">
       <h2><b>Partials</b></h2>
 
       <p>
@@ -174,8 +187,9 @@
           @import 'reset'; body { font: 100% Helvetica, sans-serif;
           background-color: #efefef; }
         </code>
-
-        <i>And the corresponding CSS output:</i>
+        <br />
+        <i class="m-5">And the corresponding CSS output:</i>
+        <br />
         <code>
           html, body, ul, ol { margin: 0; padding: 0; } body { font: 100%
           Helvetica, sans-serif; background-color: #efefef; }
@@ -185,7 +199,7 @@
         extension or the underscore.
       </p>
     </div>
-    <div>
+    <div class="col-9">
       <h2><b>Mixins</b></h2>
 
       <p>
@@ -198,11 +212,13 @@
         For example, if you need to include the vendor prefixes, you can use a
         mixin instead. Take a look at this example for border-radius:
         <br />
+        <br />
         <code>
           @mixin border-radius($radius) { -webkit-border-radius: $radius;
           -moz-border-radius: $radius; -ms-border-radius: $radius;
           border-radius: $radius; } .box { @include border-radius(10px); }
         </code>
+        <br />
         <br />
         Notice the <code>@mixin</code> directive at the top. It has been given
         the name border-radius and uses the variable $radius as its parameter.
@@ -212,7 +228,9 @@
         mixin name (border-radius) and a parameter (10px). Thus .box { @include
         border-radius(10px); }.
         <br />
+        <br />
         <b>The following CSS is produced:</b>
+        <br />
         <br />
         <code>
           .box { -webkit-border-radius: 10px; -moz-border-radius: 10px;
@@ -220,11 +238,11 @@
         </code>
       </p>
     </div>
-    <div>
+    <div class="col-9">
       <h2><b>Extend/Inheritance</b></h2>
       <p>
-        The @extend directive has been called one of Sass' most powerful
-        features. After seeing it in action, it's clear why.
+        The <code>@extend</code> directive has been called one of Sass' most
+        powerful features. After seeing it in action, it's clear why.
         <br />
         The idea is that with this directive you won't have to include multiple
         class names on your HTML elements and can keep your code DRY (don't
@@ -242,7 +260,7 @@
         numbers. Functions like percentage(), floor() and round() to name a few.
       </p>
     </div>
-    <div>
+    <div class="col-9">
       <h2><b>Tammy Coron</b></h2>
       <p>
         <b>
