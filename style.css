@@ -10,10 +10,12 @@ article {
     margin-bottom: 20px;
     width: 100% !important;
 }
+.code-div{
+    background-color: #191923 !important;
+border-radius: 5px;
+}
 
 code {
-    background-color: #191923 !important;
     color: #eaf0ce !important;
-    border-radius: 5px;
     padding: 5px;
 }

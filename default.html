@@ -124,14 +124,23 @@
         <br />
         <b>For example:</b>
         <br />
-        <code>
-          $font-stack: Helvetica, sans-serif; $primary-color: #333; body { font:
-          100% $font-stack; color: $primary-color; }
-        </code>
+        <div class="code-div">
+          <code>
+          $font-stack: Helvetica, sans-serif; $primary-color: #333; 
+            body { 
+              font: 100% $font-stack; 
+              color: $primary-color; 
+            }
+          </code>
+        </div>
+        
         <br />
         The following CSS will be produced:
         <br />
-        <code>body { font: 100% Helvetica, sans-serif; color: #333; } </code>
+        <div class="code-div">
+          <code>body { font: 100% Helvetica, sans-serif; color: #333; } </code>
+        </div>
+        
       </p>
     </div>
 
@@ -147,19 +156,50 @@
         The following shows a basic navigation style that uses nesting:
         <br />
 
-        <code>
-          nav { ul { margin: 0; padding: 0; list-style: none; } li { display:
-          inline-block; } a { display: block; padding: 6px 12px;
-          text-decoration: none; } }
-        </code>
+        <div class="code-div">
+          <code>
+            nav { 
+              ul { 
+                margin: 0; 
+                padding: 0; 
+                list-style: none; 
+              } 
+              li 
+              { 
+                display: inline-block; 
+              } 
+              a { 
+                display: block; 
+                padding: 6px 12px;
+                text-decoration: none; 
+              } 
+            }
+          </code>
+        </div>
+
         <br />
         <b>The CSS output is as follows:</b>
         <br />
-        <code>
-          nav ul { margin: 0; padding: 0; list-style: none; } nav li { display:
-          inline-block; } nav a { display: block; padding: 6px 12px;
-          text-decoration: none; }
-        </code>
+        <div class="code-div">
+          <code>
+            nav { 
+              ul { 
+                margin: 0; 
+                padding: 0; 
+                list-style: none; 
+              } 
+              li 
+              { 
+                display: inline-block; 
+              } 
+              a { 
+                display: block; 
+                padding: 6px 12px;
+                text-decoration: none; 
+              } 
+            }
+          </code>
+        </div>
       </p>
     </div>
     <div class="col-9">
@@ -179,21 +219,37 @@
         <br />
         // _reset.scss
         <br />
-        <code> html, body, ul, ol { margin: 0; padding: 0; } </code>
+        <div class="code-div">
+        <code> html, body, ul, ol { 
+          margin: 0; 
+          padding: 0; 
+        } </code>
+        </div>
         <br />
         // basefile.scss
         <br />
-        <code>
-          @import 'reset'; body { font: 100% Helvetica, sans-serif;
-          background-color: #efefef; }
-        </code>
+        <div class="code-div">
+          <code>
+            @import 'reset'; 
+            body { 
+              font: 100% Helvetica, sans-serif;
+              background-color: #efefef; 
+            }
+          </code>
+        </div>
         <br />
         <i class="m-5">And the corresponding CSS output:</i>
         <br />
-        <code>
-          html, body, ul, ol { margin: 0; padding: 0; } body { font: 100%
-          Helvetica, sans-serif; background-color: #efefef; }
-        </code>
+        <div class="code-div"><code>
+          html, body, ul, ol { 
+            margin: 0; 
+            padding: 0; 
+          } 
+          body { 
+            font: 100% Helvetica, sans-serif; 
+            background-color: #efefef; 
+          }
+        </code></div>
         <br />
         Note: When importing partials, you don't need to include the file
         extension or the underscore.
@@ -213,18 +269,26 @@
         mixin instead. Take a look at this example for border-radius:
         <br />
         <br />
-        <code>
-          @mixin border-radius($radius) { -webkit-border-radius: $radius;
-          -moz-border-radius: $radius; -ms-border-radius: $radius;
-          border-radius: $radius; } .box { @include border-radius(10px); }
-        </code>
+        <div class="code-div">
+          <code>
+            @mixin border-radius($radius) {
+              -webkit-border-radius: $radius;
+              -moz-border-radius: $radius; 
+              -ms-border-radius: $radius;
+              border-radius: $radius; 
+            } 
+            .box { 
+              @include border-radius(10px); 
+            }
+          </code>
+        </div>
         <br />
         <br />
-        Notice the <code>@mixin</code> directive at the top. It has been given
+        Notice the <span class="code-div"><code>@mixin</code> </span>directive at the top. It has been given
         the name border-radius and uses the variable $radius as its parameter.
         This variable is used to set the radius value for each element.
         <br />
-        Later, the <code>@include</code> directive is called, along with the
+        Later, the <span class="code-div"><code>@include</code></span> directive is called, along with the
         mixin name (border-radius) and a parameter (10px). Thus .box { @include
         border-radius(10px); }.
         <br />
@@ -232,16 +296,22 @@
         <b>The following CSS is produced:</b>
         <br />
         <br />
-        <code>
-          .box { -webkit-border-radius: 10px; -moz-border-radius: 10px;
-          -ms-border-radius: 10px; border-radius: 10px; }
-        </code>
+        <div class="code-div">
+          <code>
+            .box {
+              -webkit-border-radius: 10px; 
+              -moz-border-radius: 10px;
+              -ms-border-radius: 10px;
+              border-radius: 10px; 
+            }
+          </code>
+        </div>
       </p>
     </div>
     <div class="col-9">
       <h2><b>Extend/Inheritance</b></h2>
       <p>
-        The <code>@extend</code> directive has been called one of Sass' most
+        The <span class="code-div"><code>@extend</code></span> directive has been called one of Sass' most
         powerful features. After seeing it in action, it's clear why.
         <br />
         The idea is that with this directive you won't have to include multiple
